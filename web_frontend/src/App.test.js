@@ -4,7 +4,7 @@ import App from './App';
 describe('App Component', () => {
   test('renders ping monitor title', () => {
     render(<App />);
-    const titleElement = screen.getByText(/Ping Monitor/i);
+    const titleElement = screen.getByRole('heading', { name: /🌐 Ping Monitor/i, level: 1 });
     expect(titleElement).toBeInTheDocument();
   });
 
@@ -16,7 +16,7 @@ describe('App Component', () => {
 
   test('renders log panel', () => {
     render(<App />);
-    const logPanelTitle = screen.getByText(/Ping Results/i);
+    const logPanelTitle = screen.getByRole('heading', { name: /Ping Results/i });
     expect(logPanelTitle).toBeInTheDocument();
   });
 

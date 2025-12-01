@@ -12,7 +12,7 @@ describe('LogPanel Component', () => {
 
   test('renders log panel title', () => {
     render(<LogPanel logs={[]} onClear={mockOnClear} onExport={mockOnExport} />);
-    const title = screen.getByText(/Ping Results/i);
+    const title = screen.getByRole('heading', { name: /Ping Results/i });
     expect(title).toBeInTheDocument();
   });
 
